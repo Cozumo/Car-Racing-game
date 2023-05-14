@@ -1,0 +1,40 @@
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\bin\Debug\ServerSide.exe.config
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\bin\Debug\ServerSide.exe
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\bin\Debug\ServerSide.pdb
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.AssemblyReference.cache
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\obj\Debug\ServerSide.Form1.resources
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\obj\Debug\ServerSide.Properties.Resources.resources
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.GenerateResource.cache
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.CoreCompileInputs.cache
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\obj\Debug\ServerSide.exe
+C:\Users\sarib\Desktop\PndcProject\Server\ServerSide\ServerSide\obj\Debug\ServerSide.pdb
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\bin\Debug\ServerSide.exe.config
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\bin\Debug\ServerSide.exe
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\bin\Debug\ServerSide.pdb
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.AssemblyReference.cache
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\obj\Debug\ServerSide.Form1.resources
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\obj\Debug\ServerSide.Properties.Resources.resources
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.GenerateResource.cache
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.CoreCompileInputs.cache
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\obj\Debug\ServerSide.exe
+C:\Users\sarib\Desktop\PndcProject - Copy\Server\ServerSide\ServerSide\obj\Debug\ServerSide.pdb
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\bin\Debug\ServerSide.exe.config
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\bin\Debug\ServerSide.exe
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\bin\Debug\ServerSide.pdb
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.AssemblyReference.cache
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\obj\Debug\ServerSide.Form1.resources
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\obj\Debug\ServerSide.Properties.Resources.resources
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.GenerateResource.cache
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.CoreCompileInputs.cache
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\obj\Debug\ServerSide.exe
+C:\Users\sarib\Desktop\PndcProject Main\Server\ServerSide\ServerSide\obj\Debug\ServerSide.pdb
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.AssemblyReference.cache
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\obj\Debug\ServerSide.Form1.resources
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\obj\Debug\ServerSide.Properties.Resources.resources
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.GenerateResource.cache
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\obj\Debug\ServerSide.csproj.CoreCompileInputs.cache
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\obj\Debug\ServerSide.exe
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\obj\Debug\ServerSide.pdb
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\bin\Debug\ServerSide.exe.config
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\bin\Debug\ServerSide.exe
+C:\Users\sarib\Desktop\NP Project\Server\ServerSide\ServerSide\bin\Debug\ServerSide.pdb

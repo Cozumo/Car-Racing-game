@@ -1,0 +1,40 @@
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\bin\Debug\ClientSide.exe.config
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\bin\Debug\ClientSide.exe
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.AssemblyReference.cache
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\obj\Debug\ClientSide.Form1.resources
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\obj\Debug\ClientSide.Properties.Resources.resources
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.GenerateResource.cache
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.CoreCompileInputs.cache
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\obj\Debug\ClientSide.exe
+C:\Users\sarib\Desktop\PndcProject\Client\ClientSide\ClientSide\obj\Debug\ClientSide.pdb
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\bin\Debug\ClientSide.exe.config
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\bin\Debug\ClientSide.exe
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.AssemblyReference.cache
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\obj\Debug\ClientSide.Form1.resources
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\obj\Debug\ClientSide.Properties.Resources.resources
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.GenerateResource.cache
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.CoreCompileInputs.cache
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\obj\Debug\ClientSide.exe
+C:\Users\sarib\Desktop\PndcProject - Copy\Client\ClientSide\ClientSide\obj\Debug\ClientSide.pdb
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\bin\Debug\ClientSide.exe.config
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\bin\Debug\ClientSide.exe
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.AssemblyReference.cache
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\obj\Debug\ClientSide.Form1.resources
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\obj\Debug\ClientSide.Properties.Resources.resources
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.GenerateResource.cache
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.CoreCompileInputs.cache
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\obj\Debug\ClientSide.exe
+C:\Users\sarib\Desktop\PndcProject Main\Client\ClientSide\ClientSide\obj\Debug\ClientSide.pdb
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.AssemblyReference.cache
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\obj\Debug\ClientSide.Properties.Resources.resources
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.GenerateResource.cache
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\obj\Debug\ClientSide.csproj.CoreCompileInputs.cache
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\obj\Debug\ClientSide.exe
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\obj\Debug\ClientSide.pdb
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\obj\Debug\ClientSide.Form1.resources
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\bin\Debug\ClientSide.exe.config
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\bin\Debug\ClientSide.exe
+C:\Users\sarib\Desktop\NP Project\Client\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
