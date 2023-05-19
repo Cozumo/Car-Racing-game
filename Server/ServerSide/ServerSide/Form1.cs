@@ -18,29 +18,37 @@ namespace ServerSide
 
         List<string> users = new List<string>();
         List<Button> players = new List<Button>();
+        List<bool> statusCrashed = new List<bool>();
         List<Point> pos = new List<Point>();
+
         List<Point> enemyPos = new List<Point>();
         List<Button> EnemyCar = new List<Button>();
         List<int> EnemySpeed = new List<int>();
         public int globalport = 11000;
+        int numCars = 5;
 
         public int[,] randpos = new int[,] {
-            { 120, 220},
-            { 320, 420},
-            { 520, 620},
-            { 20,  60 }
+            { 10,  10 },
+            { 100, 130},
+            { 230, 280},
+            { 370, 390},
+            { 490, 500},
         };
-        public int[] randspd = new int[] { 20, 50, 10, 40, 35 };
+        public int[] randspd = new int[] { 20, 50, 10, 40, 20, 35, 30, 15, 45, 25, 20 };
         public Random rndm = new Random();
 
         public Form1()
         {
             InitializeComponent();
+            pictureBox2.SendToBack();
         }
 
         private void button1_Click(object sender, EventArgs e)      //Running game on click and removing start button
         {
             this.Controls.Remove(Start);
+
+            label11.Text = "Dodge EM Cars";
+
             run();
         }
 
@@ -49,7 +57,7 @@ namespace ServerSide
             Thread s = new Thread(move);
             s.Start();
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < numCars; i++)
             {
                 int id = i;
                 Thread sC = new Thread(() => spawnCars(id));
@@ -60,7 +68,7 @@ namespace ServerSide
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            string[] ips = "112".Split(',');
+            string[] ips = "112,116,117,113,128,126,115".Split(',');
 
             for (int i = 0; i < ips.Length; i++)
             {
@@ -79,7 +87,8 @@ namespace ServerSide
             b.ForeColor = Color.White;
             this.Controls.Add(b);
             players.Add(b);
-            pos.Add(new Point(180, 180));
+            pos.Add(new Point(250, 280));
+            statusCrashed.Add(false);
 
             Thread n = new Thread(() => read(id, i));
             n.Start();
@@ -87,14 +96,13 @@ namespace ServerSide
 
         public void read(int id, int ipp)
         {
-            bool done = false;
+            statusCrashed[id] = false;
             int listenPort = globalport;
             using (UdpClient listener = new UdpClient(ipp * 10))
             {
 
-                while (!done)
+                while (!statusCrashed[id])
                 {
-
                     IPEndPoint listenEndPoint = new IPEndPoint(IPAddress.Parse(users[id]), ipp * 10);
                     byte[] receivedData = listener.Receive(ref listenEndPoint);
                     string n = Encoding.Unicode.GetString(receivedData);
@@ -102,8 +110,9 @@ namespace ServerSide
                     pos[id] = new Point(Convert.ToInt32(n.Split(',')[0]), Convert.ToInt32(n.Split(',')[1]));
                     //should be "Hello World" sent from above client
                 }
-            }
 
+
+            }
         }
 
         public void send(int id)
@@ -155,15 +164,15 @@ namespace ServerSide
             b.Text = "Car";
             b.Width = 60;
             b.Height = 70;
-            b.BackColor = Color.Green;
-            b.ForeColor = Color.White;
+            b.BackColor = Color.Yellow;
+            b.ForeColor = Color.Black;
             EnemyCar.Add(b);
 
-            int num = rndm.Next(0, 5);
+            int num = rndm.Next(0, 10);
             EnemySpeed.Add(randspd[num]);
 
             num = rndm.Next(0, 2);
-            enemyPos.Add(new Point(randpos[i, num], 20));
+            enemyPos.Add(new Point(randpos[i, num], -20));
 
             spawnCarUpdate(b);
 
@@ -197,10 +206,10 @@ namespace ServerSide
                 enemyPos[i] = new Point(enemyPos[i].X, enemyPos[i].Y + EnemySpeed[i]);
                 EnemyCar[i].Top += EnemySpeed[i];
                 EnemyCar[i].Left = enemyPos[i].X;
-                if (enemyPos[i].Y > 380)
+                if (enemyPos[i].Y > 400)
                 {
                     int num = rndm.Next(0, 2);
-                    enemyPos[i] = new Point(randpos[i, num], 20);
+                    enemyPos[i] = new Point(randpos[i, num], -20);
                     num = rndm.Next(0, 5);
                     EnemySpeed[i] = randspd[num];
                     EnemyCar[i].Top = enemyPos[i].Y;
@@ -228,10 +237,27 @@ namespace ServerSide
                     if (res < 60)
                     {
                         pos[j] = new Point(5000, 5000);
+                        statusCrashed[j] = true;
+                        crashMessage(j);
                     }
                 }
             }
         }
+        public void crashMessage(int j)
+        {
+            if (this.InvokeRequired == true)
+            {
+                this.Invoke(new MethodInvoker(() => crashMessage(j)));
+            }
+            else
+            {
+                label12.Text = users[j] + "\n Has Crashed !!\n\n" + label12.Text ;
+            }
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
