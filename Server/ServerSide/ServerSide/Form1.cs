@@ -27,6 +27,8 @@ namespace ServerSide
         public int globalport = 11000;
         int numCars = 5;
 
+        public int[] randspd = new int[] { 20, 50, 10, 40, 20, 35, 30, 15, 45, 25, 20 };
+        public Random rndm = new Random();
         public int[,] randpos = new int[,] {
             { 10,  10 },
             { 100, 130},
@@ -34,8 +36,8 @@ namespace ServerSide
             { 370, 390},
             { 490, 500},
         };
-        public int[] randspd = new int[] { 20, 50, 10, 40, 20, 35, 30, 15, 45, 25, 20 };
-        public Random rndm = new Random();
+        
+
 
         public Form1()
         {
@@ -49,18 +51,18 @@ namespace ServerSide
 
             label11.Text = "Dodge EM Cars";
 
-            run();
+            RunProgram();
         }
 
-        public void run()
+        public void RunProgram()
         {
-            Thread s = new Thread(move);
+            Thread s = new Thread(MovePlayers);
             s.Start();
 
             for (int i = 0; i < numCars; i++)
             {
                 int id = i;
-                Thread sC = new Thread(() => spawnCars(id));
+                Thread sC = new Thread(() => SpawnCars(id));
                 sC.Start();
             }
         }
@@ -68,15 +70,18 @@ namespace ServerSide
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            string[] ips = "112,116,117,113,128,126,115".Split(',');
+            string[] ips = "112,116,117,113".Split(',');
 
             for (int i = 0; i < ips.Length; i++)
             {
-                spawn(Convert.ToInt32(ips[i]), i);
+                SpawnPlayers(Convert.ToInt32(ips[i]), i);
             }
+
+            SetPictureBox();
         }
-        
-        public void spawn(int i, int id)
+
+
+        public void SpawnPlayers(int i, int id)
         {
             users.Add("192.168.0." + i);
             Button b = new Button();
@@ -87,14 +92,14 @@ namespace ServerSide
             b.ForeColor = Color.White;
             this.Controls.Add(b);
             players.Add(b);
-            pos.Add(new Point(250, 280));
+            pos.Add(new Point(250, 320));
             statusCrashed.Add(false);
 
-            Thread n = new Thread(() => read(id, i));
+            Thread n = new Thread(() => ReadPlayers(id, i));
             n.Start();
         }
 
-        public void read(int id, int ipp)
+        public void ReadPlayers(int id, int ipp)
         {
             statusCrashed[id] = false;
             int listenPort = globalport;
@@ -110,23 +115,15 @@ namespace ServerSide
                     pos[id] = new Point(Convert.ToInt32(n.Split(',')[0]), Convert.ToInt32(n.Split(',')[1]));
                     //should be "Hello World" sent from above client
                 }
-
-
             }
         }
 
-        public void send(int id)
-        {
-            // write send code here for updating screen on user screens with broadcast
 
-        }
-
-
-        public void set()
+        public void SetPlayers()
         {
             if (this.InvokeRequired == true)
             {
-                this.Invoke(new MethodInvoker(set));
+                this.Invoke(new MethodInvoker(SetPlayers));
             }
             else
             {
@@ -137,13 +134,14 @@ namespace ServerSide
                 }
             }
         }
-        public void move()
+
+        public void MovePlayers()
         {
             while (true)
             {
                 try
                 {
-                    set();
+                    SetPlayers();
                     Thread.Sleep(1);
                 }
                 catch (Exception e)
@@ -158,7 +156,7 @@ namespace ServerSide
         // Enemy Cars Spawning ---------------=================================
 
 
-        public void spawnCars(int i)
+        public void SpawnCars(int i)
         {
             Button b = new Button();
             b.Text = "Car";
@@ -174,20 +172,20 @@ namespace ServerSide
             num = rndm.Next(0, 2);
             enemyPos.Add(new Point(randpos[i, num], -20));
 
-            spawnCarUpdate(b);
+            SpawnCarUpdate(b);
 
-            Thread m = new Thread(() => moveenemy(i));
+            Thread m = new Thread(() => MoveEnemy(i));
             m.Start();
 
-            Thread c = new Thread(() => collision(i));
+            Thread c = new Thread(() => Collision(i));
             c.Start();
         }
 
-        public void spawnCarUpdate(Button b)
+        public void SpawnCarUpdate(Button b)
         {
             if (this.InvokeRequired == true)
             {
-                this.Invoke(new MethodInvoker(() => spawnCarUpdate(b)));
+                this.Invoke(new MethodInvoker(() => SpawnCarUpdate(b)));
             }
             else
             {
@@ -195,11 +193,11 @@ namespace ServerSide
             }
         }
 
-        public void setenemy(int i)                 //Enemy positions
+        public void Setenemy(int i)                 //Enemy positions
         {
             if (this.InvokeRequired == true)
             {
-                this.Invoke(new MethodInvoker(()=> setenemy(i)));
+                this.Invoke(new MethodInvoker(()=> Setenemy(i)));
             }
             else
             {
@@ -218,36 +216,36 @@ namespace ServerSide
             }
         }
 
-        public void moveenemy(int i)    
+        public void MoveEnemy(int i)    
         {
             while (true)
             {
-                setenemy(i);
+                Setenemy(i);
                 Thread.Sleep(300);
             }
         }
 
-        public void collision(int i)        //Enemy and Player collision
+        public void Collision(int i)        //Enemy and Player collision
         {
             while (true)
             {
                 for (int j = 0; j < players.Count; j++)
                 {
                     double res = Math.Sqrt(Math.Pow(pos[j].X - enemyPos[i].X, 2) + Math.Pow(pos[j].Y - enemyPos[i].Y, 2));
-                    if (res < 60)
+                    if (res < 65)
                     {
                         pos[j] = new Point(5000, 5000);
                         statusCrashed[j] = true;
-                        crashMessage(j);
+                        CrashMessage(j);
                     }
                 }
             }
         }
-        public void crashMessage(int j)
+        public void CrashMessage(int j)
         {
             if (this.InvokeRequired == true)
             {
-                this.Invoke(new MethodInvoker(() => crashMessage(j)));
+                this.Invoke(new MethodInvoker(() => CrashMessage(j)));
             }
             else
             {
@@ -258,6 +256,35 @@ namespace ServerSide
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void SetPictureBox()
+        {
+            pictureBox3.SendToBack();
+            pictureBox4.SendToBack();
+            pictureBox5.SendToBack();
+            pictureBox6.SendToBack();
+            pictureBox7.SendToBack();
+            pictureBox8.SendToBack();
+            pictureBox9.SendToBack();
+            pictureBox10.SendToBack();
+            pictureBox11.SendToBack();
+            pictureBox12.SendToBack();
+            pictureBox13.SendToBack();
+            pictureBox14.SendToBack();
+            pictureBox15.SendToBack();
+            pictureBox16.SendToBack();
+            pictureBox17.SendToBack();
+            pictureBox18.SendToBack();
+            pictureBox19.SendToBack();
+            pictureBox20.SendToBack();
+            pictureBox21.SendToBack();
+            pictureBox22.SendToBack();
+            pictureBox23.SendToBack();
+            pictureBox24.SendToBack();
+            pictureBox25.SendToBack();
+            pictureBox26.SendToBack();
         }
     }
 }

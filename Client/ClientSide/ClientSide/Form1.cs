@@ -15,7 +15,7 @@ namespace ClientSide
     public partial class Form1 : Form
     {
         int x = 250;
-        int y = 280;
+        int y = 320;
         UdpClient s = null;
 
         public Form1()
